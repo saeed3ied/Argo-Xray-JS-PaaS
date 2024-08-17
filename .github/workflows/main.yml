@@ -15,6 +15,7 @@ jobs:
       uses: shimataro/ssh-key-action@v2
       with:
         key: ${{ secrets.SSH_KEY }}
+        if_key_exists: ignore # replace / ignore
         known_hosts: " "
     - name: Add git.evennode.com to known_hosts
       run: |
